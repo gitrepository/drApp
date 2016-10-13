@@ -1,0 +1,73 @@
+<section>
+  <div class="page-header">
+    <h1>New Hospital</h1>
+  </div>
+  <form name="hospitalRegForm" class="form-horizontal" ng-submit="create(hospitalRegForm.$valid)" novalidate>
+    <div class="form-group" show-errors>
+      <label for="name">Hospital Name</label>
+      <input type="text" id="name" name="name" ng-model="hospitalObj.name" class="form-control" placeholder="Hospital Name" required>
+      <div ng-messages="hospitalRegForm.name.$error" role="alert">
+        <p class="help-block error-text" ng-message="required">Hospital name is required.</p>
+      </div>
+    </div>
+    <div class="form-group" show-errors>
+      <label for="street1">Street1</label>
+      <input type="text" id="street1" name="street1" ng-model="hospitalObj.address.street1" class="form-control" placeholder="Address Street1">
+    </div>
+    <div class="form-group" show-errors>
+      <label for="street2">Street2</label>
+      <input type="text" id="street2" name="street2" ng-model="hospitalObj.address.street2" class="form-control" placeholder="Address Street2">
+    </div>
+    <div class="form-group" show-errors>
+      <label for="city">City</label>
+      <input type="text" id="city" name="city" ng-model="hospitalObj.address.city" class="form-control" placeholder="City">
+    </div>
+    <div class="form-group" show-errors>
+      <label for="locality">Locality</label>
+      <input type="text" id="locality" name="locality" ng-model="hospitalObj.address.locality" class="form-control" placeholder="Locality">
+    </div>
+    <div class="form-group" show-errors>
+      <label for="state">State</label>
+      <input type="text" id="state" name="state" ng-model="hospitalObj.address.state" class="form-control" placeholder="State">
+    </div>
+    <div class="form-group" show-errors>
+      <label for="pinCode">Pin Code</label>
+      <input type="text" id="pinCode" name="pinCode" ng-model="hospitalObj.address.pinCode" class="form-control" placeholder="PIN Code">
+    </div>
+    <div class="form-group" show-errors>
+      <label for="landMark">Land Mark</label>
+      <input type="text" id="landMark" name="landMark" ng-model="hospitalObj.landMark" class="form-control" placeholder="Land Mark">
+    </div>
+    <div class="form-group" show-errors>
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" name="phone" ng-model="hospitalObj.phone" class="form-control" placeholder="Phone Number">
+    </div>
+    <div class="form-group" show-errors>
+      <label for="contactName">Name</label>
+      <input type="text" id="contactName" name="contactName" ng-model="hospitalObj.contact.name" class="form-control" placeholder="Contact Name">
+    </div>
+    <div class="form-group" show-errors>
+      <label for="contactEmail">Email</label>
+      <input type="email" id="contactEmail" name="contactEmail" ng-model="hospitalObj.contact.email" class="form-control" placeholder="Contact Email">
+    </div>
+    <div class="form-group" show-errors>
+      <label for="contactPhone">Phone</label>
+      <input type="text" id="contactPhone" name="contactPhone" ng-model="hospitalObj.contact.phone" class="form-control" placeholder="Contact Phone">
+    </div>
+    <div class="form-group" show-errors>
+      <label for="contactTiming">Timing</label>
+      <input type="text" id="contactTiming" name="contactTiming" ng-model="hospitalObj.contact.timing" class="form-control" placeholder="Contact Timing">
+    </div>
+    <div class="form-group" show-errors>
+      <label for="doctors">Number of Doctors</label>
+      <input type="number" id="doctors" name="doctors" ng-model="hospitalObj.numberOfDoctors" class="form-control" placeholder="Number of Doctors">
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Create Hospital</button>
+    </div>
+    <div ng-show="error" class="text-danger">
+      <span ng-bind="error"></span>
+    </div>
+  </form>
+</section>
