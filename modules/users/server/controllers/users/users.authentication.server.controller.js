@@ -68,7 +68,18 @@ exports.signin = function (req, res, next) {
         if (err) {
           res.status(400).send(err);
         } else {
-          res.json(user);
+          if (user.roles[0] === 'tempHA') {
+            user.remove(function (err) {
+              if (err) {
+                return res.status(400).send({
+                  message: errorHandler.getErrorMessage(err)
+                });
+              }
+              res.json(user);
+            });
+          } else {
+            res.json(user);
+          }
         }
       });
     }

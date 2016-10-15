@@ -63,6 +63,10 @@ var UserSchema = new Schema({
     type: String,
     default: ''
   },
+  tempPassword: {
+    type: String,
+    default: ''
+  },
   salt: {
     type: String
   },
@@ -79,7 +83,7 @@ var UserSchema = new Schema({
   roles: {
     type: [{
       type: String,
-      enum: ['user', 'admin']
+      enum: ['user', 'admin', 'tempHA', 'HA']
     }],
     default: ['user'],
     required: 'Please provide at least one role'

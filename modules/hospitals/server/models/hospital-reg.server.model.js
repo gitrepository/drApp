@@ -86,6 +86,10 @@ var HospitalRegSchema = new Schema({
     default: '',
     trim: true
   },
+  creator: {
+    type: Schema.ObjectId,
+    ref: 'User'
+  },
   activated: {
     type: Boolean,
     default: false

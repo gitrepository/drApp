@@ -26,7 +26,7 @@
 
       hospitalReg.$save(function (response) {
         $scope.hospitalObj = {};
-        $location.path('/hospitals');
+        $location.path('/');
       }, function (errResponse) {
         $scope.error = errResponse.data.message;
       });

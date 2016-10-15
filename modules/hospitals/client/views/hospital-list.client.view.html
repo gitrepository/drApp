@@ -8,10 +8,16 @@
       <h4 class="list-group-item-heading" ng-bind="hospital.name"></h4>
       <p class="list-group-item-text" ng-bind="hospital.phone"></p>
       <small class="list-group-item-text">
-        <span>{{hospital.address.street1+' '+hospital.address.street2+' '+hospital.address.city+' '+hospital.address.locality+' '+hospital.address.state+' '+hospital.address.pinCode}}</span>
+        <span>Address: {{hospital.address.street1+' '+hospital.address.street2+' '+hospital.address.city+' '+hospital.address.locality+' '+hospital.address.state+' '+hospital.address.pinCode}}</span>
         <br>
         <span>{{hospital.contact.name}}</span>
       </small>
+      <p class="list-group-item-text">
+        TempHospitalID: {{hospital.creator.username}}
+      </p>
+      <p class="list-group-item-text">
+        TempHospitalPassword: {{hospital.creator.tempPassword}}
+      </p>
     </a>
   </div>
 </section>
